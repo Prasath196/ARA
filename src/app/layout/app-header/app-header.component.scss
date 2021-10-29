@@ -1,0 +1,29 @@
+.ara-header{
+    height: 54.08px;
+    padding: 0px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 3px 6px 0 #f7f7f7;
+    background-color: #fff;
+    font-family: 'Poppins-Medium';
+    font-weight: 500;
+    .project-selector{
+        background-image: url("../../../assets/backgrounds/toolbar-bg.png");
+        width: 232px;
+        height: inherit;
+        color: #fff;
+        font-size: 11px;
+        padding: 0 16px;
+        .model-tb-img{
+            margin-right:16px;
+            width: 16px;
+        }
+        .down-arrow-img{
+            width: 22px;
+        }
+    }
+    .toolbar-add{
+        margin-right: 24px;
+        cursor: pointer;
+    }
+}

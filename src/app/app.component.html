@@ -1,0 +1,63 @@
+<splash-screen></splash-screen>
+<div #araRoot class="araRoot">
+  <mat-drawer-container fullscreen>
+    <mat-drawer #araDrawer mode="side" opened *ngIf="isLoggedin" class="drawer" [@openClose]="!isFolded ? 'open' : 'closed'">
+      <div fxLayout="column" fxFlex>
+        <div class="logo-container" fxLayoutAlign="center">
+          <img *ngIf="isFolded" width="20px" src="./assets/images/short_ara.png">
+          <img *ngIf="!isFolded" src="assets/images/ara_logo.png" alt="logo" class="logo">
+        </div>
+        <div class="menu-container">
+          <mat-nav-list [disableRipple]="true" class="nav-list1" [ngStyle]="{'width':isFolded?'56px':'auto'}">
+            <app-menu-item *ngFor="let item of navItems1" [item]="item" [isFolded]="isFolded"></app-menu-item>
+          </mat-nav-list>
+          <div class="seperator"></div>
+          <mat-nav-list [disableRipple]="true" [ngStyle]="{'width':isFolded?'56px':'auto'}">
+            <app-menu-item *ngFor="let item of navItems2" [item]="item" [isFolded]="isFolded"></app-menu-item>
+          </mat-nav-list>
+        </div>
+        <!-- <div class="purchase-container" fxLayout="column" fxLayoutAlign="start center" fxShow fxHide.xs="true" fxHide.sm="true" fxHide.md="true">
+          <img src="assets/images/purchase_pro.png" alt="purchase" width="100px">
+          <label class="description">Buy <b>pro account </b>to explore premium features</label>
+          <button class="purchase-btn">Purchase now!</button>
+        </div> -->
+        <div fxFlex></div>
+        <div class="user-panel" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px" *ngIf="!isFolded">
+          <div class="user" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <img src="assets/images/user.png" alt="user" class="user-img">
+            <label>{{currentUser.userName}}</label>
+            <div fxFlex></div>
+            <img src="assets/icons/activity.svg" alt="activity" width="8px">
+          </div>
+          <div class="logout" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="22px">
+            <img src="assets/icons/logout.svg" alt="logout" class="logout-img">
+            <span (click)="logout()">Logout</span>
+          </div>
+        </div>
+        <div class="user-panel" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px" *ngIf="isFolded" [ngStyle]="{'margin':isFolded?'0px':'auto'}">
+          <div class="user" fxLayout="row" fxLayoutAlign="center end">
+            <img src="assets/images/user.png" alt="user" class="user-img">
+            <img src="assets/icons/activity.svg" alt="activity" width="8px">
+          </div>
+          <div class="logout" fxLayout="row" fxLayoutAlign="center center" [ngStyle]="{'padding-left':isFolded?'0px':'auto'}" (click)="logout()">
+            <img src="assets/icons/logout.svg" alt="logout" class="logout-img">
+          </div>
+        </div>
+        <div class="expand" fxLayoutAlign="space-between end">
+          <div class="exalca-container" fxLayout="column" fxLayoutGap="2px" *ngIf="!isFolded">
+            <span>Powered by</span>
+            <img src="assets/icons/exalca_logo.svg" alt="logo" class="logo">
+          </div>
+          <div fxFlex *ngIf="isFolded"></div>
+          <img src="assets/icons/expand_arrow.svg" alt="expand" *ngIf="isFolded" width="10px" class="expand-btn" (click)="toggleSideMenu()">
+          <img src="assets/icons/expand.svg" alt="expand" *ngIf="!isFolded" width="10px" class="expand-btn" (click)="toggleSideMenu()">
+        </div>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content #drawerContent class="drawer-content" [@marginAlign]="!isLoggedin?'login':!isFolded ? 'open' : 'closed'">
+      <app-header *ngIf="isLoggedin"></app-header>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <app-loader></app-loader>
+</div>

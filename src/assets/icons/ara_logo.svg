@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="40.182">
+    <defs>
+        <style>
+            .cls-1{fill:#4db151}.cls-2{fill:#1f009e}
+        </style>
+    </defs>
+    <g id="Group_8200" data-name="Group 8200" transform="translate(-50 -30.182)">
+        <g id="Group_8184" data-name="Group 8184" transform="translate(50 35.434)">
+            <g id="Group_32" data-name="Group 32">
+                <path id="Rectangle_6038" data-name="Rectangle 6038" class="cls-1" transform="translate(18.39)" d="M0 0h1.791v8.539H0z"/>
+                <path id="Rectangle_6037" data-name="Rectangle 6037" class="cls-1" transform="rotate(90 10.091 10.091)" d="M0 0h1.846v15.524H0z"/>
+                <path id="Rectangle_6036" data-name="Rectangle 6036" class="cls-1" transform="translate(4.657)" d="M0 0h1.791v11.797H0z"/>
+                <path id="Rectangle_6032" data-name="Rectangle 6032" class="cls-2" transform="translate(0 11.247)" d="M0 0h1.808v19.819H0z"/>
+                <path id="Rectangle_6034" data-name="Rectangle 6034" class="cls-2" transform="translate(9.342 11.247)" d="M0 0h1.808v22.791H0z"/>
+                <path id="Rectangle_6039" data-name="Rectangle 6039" class="cls-1" transform="translate(14.164 6.986)" d="M0 0h1.808v27.944H0z"/>
+                <path id="Rectangle_6033" data-name="Rectangle 6033" class="cls-2" transform="rotate(90 .34 10.81)" d="M0 0h1.784v11.15H0z"/>
+                <path id="Rectangle_6041" data-name="Rectangle 6041" class="cls-2" transform="rotate(90 9.315 16.301)" d="M0 0h1.784v3.616H0z"/>
+                <path id="Rectangle_6042" data-name="Rectangle 6042" class="cls-2" transform="translate(24.063 6.986)" d="M0 0h1.809v24.063H0z"/>
+                <path id="Path_7051" data-name="Path 7051" class="cls-1" d="M0 0h1.552v5.995H0z" transform="rotate(90 6.587 13.574)"/>
+            </g>
+        </g>
+        <text id="ARANxt" transform="translate(122 60.182)" style="font-size:20px;font-family:Geometric415BT-BlackA,Geometr415 Blk BT;font-weight:800;fill:#1f009e"><tspan x="-39.086" y="0">A</tspan><tspan y="0" style="font-size:31px">R</tspan><tspan y="0">A</tspan><tspan class="cls-1" y="0">Nxt</tspan></text>
+        <path id="Rectangle_7597" data-name="Rectangle 7597" class="cls-2" transform="translate(68 47.182)" d="M0 0h2v2H0z"/>
+        <path id="Rectangle_7598" data-name="Rectangle 7598" class="cls-1" transform="translate(54 51.182)" d="M0 0h2v2H0z"/>
+    </g>
+</svg>

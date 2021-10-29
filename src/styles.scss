@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+  height: 100%; 
+  font-family: 'Poppins-SemiBold';
+  font-weight: 500;
+}
+body { margin: 0;}
+
+
+@font-face{
+    font-family:'Poppins-Regular';
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+@font-face{
+    font-family:'Poppins-Medium';
+    src: url("./assets/fonts/Poppins-Medium.ttf");
+}
+@font-face{
+    font-family:'Poppins-Light';
+    src: url("./assets/fonts/Poppins-Light.ttf");
+}
+@font-face{
+    font-family:'Poppins-Bold';
+    src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face{
+  font-family:'Poppins-SemiBold';
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+}
+.success {
+    background-color: #26b329 !important;
+  }
+  
+  .danger {
+    background-color: #d6201d !important;
+  }
+  
+  .warning {
+    background: rgb(235, 229, 255) !important;
+    color: rgb(38, 0, 156);
+  }
+  
+  .info {
+    background-color: #1992ce !important;
+  }
+  .mat-simple-snackbar {
+    font-family: 'poppins-semi';
+    font-size: 11px !important;
+  }
+  .mat-snack-bar-container {
+    min-width: 272px !important;
+  }
+
+//Hide scrollbar
+  ::-webkit-scrollbar {
+    display: none;
+  }
+//   //Custom scrollbar
+//    /* width */
+// ::-webkit-scrollbar {
+//   width: 4px;
+//   height: 4px; 
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background:transparent;
+// }
+ 
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: #aaa; 
+//   border-radius: 4px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #888; 
+// }

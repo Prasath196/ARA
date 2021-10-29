@@ -1,0 +1,168 @@
+<div id="login" class="inner-scroll normal" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="50px">
+
+    <!-- <div id="login-intro" fxFlex fxHide fxShow.gt-xs>
+
+    </div> -->
+
+    <div id="login-form-wrapper" fusePerfectScrollbar>
+
+        <div id="login-form">
+            <div class="logo" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                <!-- <img src="assets/images/rfq/Exalca_Logo.jpg" width="100px"> -->
+                <span class="welcomespan"> WELCOME TO </span>
+                <img src="assets/images/ara_login_logo.png" width="94px">
+            </div>
+            <div class="title">Sign In</div>
+            <!-- <div class="border"></div> -->
+
+            <div class="subTitel">Please Sign In to Continue</div>
+
+            <form name="loginForm" [formGroup]="loginForm" novalidate (ngSubmit)="LoginClicked()">
+                <!-- <div>
+                    <span class="usernamespan"> User Name</span>
+                    <mat-form-field  appearance="outline"> (ngSubmit)="onSubmit(this.loginForm.value)"
+                        <input matInput formControlName="userName">
+                        <mat-error *ngIf="loginForm.get('userName').hasError('required')">
+                            User name is required
+                        </mat-error>
+                    </mat-form-field>
+                </div> -->
+                <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="20px">
+                    <div fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="8px">
+                        <span class="usernamespan"> User Name</span>
+                        <div class="inputdivision">
+                            <input autocomplete="off" matInput formControlName="userName" class="inputform "
+                                placeholder="Enter Username">
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="8px">
+                        <span class="usernamespan">Password</span>
+                        <div class="inputdivision" fxLayout="row" fxLayoutAlign="start center">
+                            <input autocomplete="off" matInput formControlName="password" class="inputform"
+                                placeholder="Enter Password" [type]="!isVisible ? 'password' : 'text'">
+                            <!-- <mat-icon class="show" (click)="hide=!hide;">{{hide ? 'visibility' : 'visibility_off'}}
+                            </mat-icon> -->
+
+                            <img src="assets/icons/password_eye_close.svg" *ngIf="!isVisible" (click)="isVisible=true;" class="show">
+                            <img src="assets/icons/password_eye_open.svg" class="show" *ngIf="isVisible" (click)="isVisible=false;">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div>
+                    <span class="usernamespan">Password</span>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="password" formControlName="password">
+                        <mat-error>
+                            Password is required
+                        </mat-error>
+                    </mat-form-field>
+                </div> -->
+                <!-- <div class="remember-forgot-password" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end center">
+            <span class="forgot-password" (click)="OpenForgetPasswordLinkDialog()">
+              Forgot Password?
+            </span>
+          </div> -->
+
+            
+            <div class="forgetpassworddiv" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end center">
+                <span class="forgetpassword">Forgot Password ?</span>
+            </div>
+            <div class="buttondiv">
+                <button mat-raised-button class="submit-button" aria-label="LOGIN"
+                    type="submit">
+                    Log In
+                </button>
+            </div>
+        </form>
+            <div class="choicediv">
+                <span class="choicespan">
+                    ( or ) Login with
+                </span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-evenly" class="choicesoptiondiv">
+                <div fxLayout="row" fxLayoutAlign="start center" class="pointer">
+                    <img src="assets/icons/google_logo.svg" class="imageschoice">
+                    <span class="google">Google</span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="start center" class="pointer">
+                    <img src="assets/icons/outlook_logo.svg" class="imageschoice">
+                    <span class="google">Outlook</span>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" class="signupdiv" fxLayoutGap="5px">
+                <span class="newto">
+                    New to
+                </span>
+                <img src="assets/images/ara_logo_grey.png" width="55px">
+                <span class="signupdiv2">
+                    Please,
+                </span>
+                <span class="signupdiv3">
+                    Sign Up
+                </span>
+            </div>
+
+            <!-- <mat-progress-spinner *ngIf="IsProgressBarVisibile" class="ProgressBarPostion" color="accent"
+          mode="indeterminate"></mat-progress-spinner> -->
+        </div>
+
+
+    </div>
+    <div id="login-intro" fxFlex fxHide fxShow.gt-xs fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="center" style="width: 100%;">
+            <mat-carousel class="sliderpart" timings="800ms ease-in" [autoplay]="true" interval="3000" color="primary"
+                proportion="25" slides="5" [loop]="true" [hideArrows]="true" [hideIndicators]="false"
+                [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr" maintainAspectRatio="false"
+                slideHeight="100%">
+                <mat-carousel-slide #matCarouselSlide overlayColor="white " [hideOverlay]="false"
+                    class="carouselslide1">
+                    <div class="slideingpart" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+                        <img src="assets/images/ara_slide1.png" class="slide-img">
+                        <span class="slide-txt">
+                            A building management system (BMS), otherwise known as a building
+                            automation system (BAS),
+                        </span>
+                    </div>
+                </mat-carousel-slide>
+                <mat-carousel-slide #matCarouselSlide overlayColor="white" [hideOverlay]="false" class="carouselslide1">
+                    <div class="slideingpart" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="70px">
+                        <img src="assets/images/ara_slide2.png" class="slide-img">
+                        <span class="slide-txt">
+                            Computer-based control system installed in buildings that controls and
+                            monitors the building’s mechanical and electrical equipment such as ventilation,
+                            lighting, power systems, fire systems, and security systems.
+                        </span>
+                    </div>
+                </mat-carousel-slide>
+                <mat-carousel-slide #matCarouselSlide overlayColor="white" [hideOverlay]="false" class="carouselslide1">
+                    <div class="slideingpart" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="40px">
+                        <img src="assets/images/ara_slide3.png" class="slide-img">
+                        <span class="slide-txt">
+                            Hardware. DDC-Direct digital controller. Sensors. Actuators
+                        </span>
+                    </div>
+                </mat-carousel-slide>
+                <mat-carousel-slide #matCarouselSlide overlayColor="white" [hideOverlay]="false" class="carouselslide1">
+                    <div class="slideingpart" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+                        <img src="assets/images/ara_slide4.png" class="slide-img">
+                        <span class="slide-txt">
+                            Control Panel is adding or removing hardware and software, controlling user accounts,
+                            changing accessibility options, and accessing networking settings.
+                        </span>
+                    </div>
+                </mat-carousel-slide>
+            </mat-carousel>
+
+            <div>
+                <div fxLayout="row" fxLayoutAlign="center center" class="finaldiv" fxLayoutGap="5px">
+                    <span class="powerdbyspan">
+                        Powered by
+                    </span>
+                    <img src="assets/icons/powered_by_logo.svg" width="100px" height="20px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
