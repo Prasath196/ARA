@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // import { NgCircleProgressModule } from 'ng-circle-progress';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -59,12 +59,27 @@ export type ChartOptions2 = {
   grid: ApexGrid;
 };
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  encapsulation:ViewEncapsulation.None
+  selector: 'app-over',
+  templateUrl: './over.component.html',
+  styleUrls: ['./over.component.scss'],
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        width: '100%'
+      })),
+      state('close', style({
+        width: '40%'
+      })),
+      transition('open => close', [
+        animate('0.2s')
+      ]),
+      transition('close => open', [
+        animate('0.2s')
+      ]),
+    ])
+  ]
 })
-export class HomeComponent implements OnInit {
+export class OverComponent implements OnInit {
   expiryisopen: boolean = false;
   public chartOptions: ChartOptions;
   public chartOptions1: ChartOptions1;
@@ -205,7 +220,7 @@ export class HomeComponent implements OnInit {
         type: "bar",
         height: 100,
         foreColor: '#999999',
-        fontFamily: 'poppins-semi',
+        fontFamily: 'Poppins-SemiBold',
       },
       plotOptions: {
         bar: {
@@ -222,7 +237,7 @@ export class HomeComponent implements OnInit {
         enabled: false,
         style: {
           fontSize: "10px !important",
-          fontFamily: 'poppins-semi',
+          fontFamily: 'Poppins-SemiBold',
           colors: ["#2c2c2e"]
         }
       },

@@ -4,19 +4,17 @@ import { CommonModule } from '@angular/common';
 import { PageRoutingModule } from './page-routing.module';
 import { HomeComponent } from './home/home.component';
 import { UserManagementModule } from './user-management/user-management.module';
-import { SiteTreeComponent } from './site-tree/site-tree.component';
 import {MatButtonModule} from '@angular/material/button';
-import {MatTreeModule} from '@angular/material/tree';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDividerModule} from '@angular/material/divider';
 import { SharedModule } from '../shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
+import { ModelsModule } from './models/models.module';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    SiteTreeComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatMenuModule,
     MatDividerModule,
     SharedModule,
-    MatIconModule
+    MatIconModule,
+    ModelsModule
   ]
 })
 export class PageModule { }

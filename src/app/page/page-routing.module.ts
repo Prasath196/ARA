@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./user-management/user-management.module').then( m => m.UserManagementModule)
   },
   {
+    path:'models',
+    loadChildren: () => import('./models/models.module').then( m => m.ModelsModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

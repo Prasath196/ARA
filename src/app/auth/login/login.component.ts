@@ -157,7 +157,8 @@ export class LoginComponent implements OnInit {
         {
           displayName: "Models",
           icon: "assets/icons/model.svg",
-          route: '1',
+          icon_active: "assets/icons/models_active.svg",
+          route: '/page/models/dashboard',
           type: "main"
         }
       );

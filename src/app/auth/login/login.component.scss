@@ -92,6 +92,8 @@
             background-color: #ffffff;
             min-width: 32%;
             overflow: auto;
+            -ms-overflow-style: hidden !important;
+            -moz-overflow-style:hidden !important;
             -webkit-overflow-scrolling: touch;
             padding: 36px 0;
             border-radius: 4px;
@@ -150,6 +152,10 @@
               .inputform::placeholder{
                 font-size: 10px !important;
                 color: #acacac !important;
+              }
+              .inputform::-ms-reveal,
+              .inputform::-ms-clear {
+                display: none;
               }
               .show{
                  transform: scale(0.6);
@@ -362,6 +368,12 @@
                 }
             }
            
+        }
+        #login-form-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        #login-form-wrapper::-moz-scrollbar {
+            display: none;
         }
         .slide-img{
             width: 55%;

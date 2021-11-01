@@ -1,0 +1,66 @@
+<div class="homepage-dashboard" fxLayout="row">
+    <div  fxLayout="row" class="first-homepage-div">
+        <app-site-tree></app-site-tree>
+    </div>
+    <div class="second-homepage-div">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="inner-dashboard">
+            <div fxLayout="row" class="menu-dashboard">
+                <div (click)="setPage('overview')"
+                    [ngClass]="selectedPage == 'overview' ? 'main_buttons' : 'main_buttons_not_seklected' ">
+                    Overview </div>
+                <div style="margin-left: 10px;" (click)="setPage('list')"
+                    [ngClass]="selectedPage == 'list' ? 'main_buttons' : 'main_buttons_not_seklected' "> List
+                </div>
+                <div style="margin-left: 10px;" (click)="setPage('controlpanel')"
+                    [ngClass]="selectedPage == 'controlpanel' ? 'main_buttons' : 'main_buttons_not_seklected' ">
+                    Control
+                    Panel </div>
+                <div style="margin-left: 10px;" (click)="setPage('utility')"
+                    [ngClass]="selectedPage == 'utility' ? 'main_buttons' : 'main_buttons_not_seklected' ">
+                    Utility
+                    Building
+                </div>
+                <div style="margin-left: 10px;" (click)="setPage('document')"
+                    [ngClass]="selectedPage == 'document' ? 'main_buttons' : 'main_buttons_not_seklected' ">
+                    Documents
+                </div>
+                <div class="main_buttons_not_seklected" style="margin-left: 10px;" (click)="setPage('signals')"
+                    [ngClass]="selectedPage == 'signals' ? 'main_buttons' : 'main_buttons_not_seklected' ">
+                    Signals </div>
+                <div class="main_buttons_not_seklected" style="margin-left: 10px;"
+                    (click)="setPage('actioncenter')"
+                    [ngClass]="selectedPage == 'actioncenter' ? 'main_buttons' : 'main_buttons_not_seklected' ">
+                    Action Center
+                </div>
+            </div>
+            <div fxLayout="row" class="main_buttons_side">
+                <!-- (click)="ViewAnalytics()" -->
+                <div>View Analytics </div>
+                <div>
+                    <img src="./assets/images/arrow_right_direction.svg" class="view-analytics-image">
+                </div>
+            </div>
+        </div>
+        <div *ngIf="selectedPage == 'overview'" class="gap-padding">
+            <app-over></app-over>
+        </div>
+        <div *ngIf="selectedPage == 'list'">
+            <!-- <app-ara-list></app-ara-list> -->
+        </div>
+        <div *ngIf="selectedPage == 'controlpanel'">
+            <!-- <app-control-pannel></app-control-pannel> -->
+        </div>
+        <div *ngIf="selectedPage == 'utility'">
+            <!-- <app-utility></app-utility> -->
+        </div>
+        <div *ngIf="selectedPage == 'document'">
+            <!-- <app-document></app-document> -->
+        </div>
+        <div *ngIf="selectedPage == 'signals'">
+            <!-- <app-signals></app-signals> -->
+        </div>
+        <div *ngIf="selectedPage == 'actioncenter'" class="gap-padding">
+            <!-- <app-action></app-action> -->
+        </div>
+    </div>
+</div>
